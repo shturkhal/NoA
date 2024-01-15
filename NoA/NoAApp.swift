@@ -11,7 +11,7 @@ import SwiftUI
 struct NoAApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentTabView()
         }
     }
 }

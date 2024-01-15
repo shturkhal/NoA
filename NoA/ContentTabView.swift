@@ -9,18 +9,28 @@ import SwiftUI
 
 struct ContentTabView: View {
     var body: some View {
-        TabView {
-            Monitor()
-                .tabItem {
-                    Image(systemName: "drop.triangle.fill")
-                    Text("Монітор")
-                }
-                .symbolRenderingMode(.palette)
-        }
         
+        TabView {
+            PurpleTest(animateGradient: true)
+                .tabItem {
+                    Image(systemName: "flag.checkered.circle")
+                    Text("Your results")
+                        
+                }
+            AccountView()
+                .tabItem {
+                    Image(systemName: "person.circle")
+                    Text("Account")
+                }
+            
+        }
+        .tint(Color.periwinkle)
+       
     }
     
 }
+
+
 #Preview {
     ContentTabView()
 }
