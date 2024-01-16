@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct OneBigCircleView: View {
-    
+
     var progress: Float
     var color: Color
+    
     var body: some View {
-        
         ZStack {
             Circle()
                 .stroke(lineWidth: 40.0)
@@ -24,7 +24,7 @@ struct OneBigCircleView: View {
                 .stroke(style: StrokeStyle(lineWidth: 40.0, lineCap: .round, lineJoin: .round))
                 .foregroundStyle(color)
                 .rotationEffect(Angle.degrees(270))
-                .animation(.easeInOut(duration: 2.0))
+                .animation(.spring(duration: 1.0))
         }
     }
 }
@@ -32,3 +32,5 @@ struct OneBigCircleView: View {
 #Preview {
     OneBigCircleView(progress: 0.3, color: Color.red)
 }
+
+

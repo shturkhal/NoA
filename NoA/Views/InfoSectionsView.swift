@@ -41,7 +41,7 @@ struct InfoSectionsView: View {
 }
 
 #Preview {
-    InfoSectionsView(nameOfSection: "Achi",
+    InfoSectionsView(nameOfSection: "Test",
                  indicator: "10/100",
                  image: "star.fill",
                  color: Color.newGreen)

@@ -14,7 +14,6 @@ struct CardsView: View {
     var image: String
     
     var body: some View {
-        
         ZStack {
             rect
                 .frame(width: 130, height: 130)

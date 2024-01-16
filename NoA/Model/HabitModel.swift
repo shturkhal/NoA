@@ -8,15 +8,17 @@
 import Foundation
 
 struct HabitModel {
-    static let maxAchi = 100
+    
+    static let maxAchievement = 100
     static let maxGoal = 100
-    var userAchi: Int
+    
+    var userAchievement: Int
     var userGoal: Int
     var savedMoney: Double
 }
 
 struct MockData {
-    static let sample = HabitModel(userAchi: 35, userGoal: 45, savedMoney: 545.65)
+    static let sample = HabitModel(userAchievement: 35, userGoal: 45, savedMoney: 545.65)
 }
 
 

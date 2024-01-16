@@ -11,8 +11,6 @@ struct PurpleMonitorView: View {
     
     @State var progressValue: Float = 0.1
     
-    
-    
     var body: some View {
         // Кола навколо днів
         VStack {
@@ -32,12 +30,10 @@ struct PurpleMonitorView: View {
                 // Дні без шкідливої звички
                 VStack {
                     Text("178")
+                        .font(.system(size: 70, weight: .medium))
                     Text("days")
+                        .font(.system(size: 30))
                 }
-                .font(.system(size: 50, weight: .medium))
-                .shadow(color: .periwinkle, radius: 2)
-                .fontDesign(.rounded)
-                .foregroundStyle(Color.white)
                 .onTapGesture {
                     if (progressValue) < 1.0 {
                         self.progressValue += 0.10
@@ -45,11 +41,16 @@ struct PurpleMonitorView: View {
                         progressValue -= 1.0
                     }
                 }
+                
+                .shadow(color: Color.periwinkle, radius: 2)
+                .fontDesign(.rounded)
+                .foregroundStyle(Color.white)
             }
             .frame(width: 260, height: 310)
             .padding(.top)
-            // Секція з індикаторами
+            
             Form {
+                // Секція з індикаторами
                 Section {
                     InfoSectionsView(nameOfSection: "Achievement",
                                      indicator: "\(MockData.sample.userAchievement) / \(HabitModel.maxAchievement)",
@@ -71,7 +72,6 @@ struct PurpleMonitorView: View {
                     VStack {
                         ScrollView(.horizontal, showsIndicators: false) {
                             HStack(spacing: 15) {
-                                
                                 ForEach(0..<6, id: \Int.self) { step in
                                     CardsView(color: Color.soap, image: "3dtarget")
                                 }

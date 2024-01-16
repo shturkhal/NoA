@@ -11,18 +11,16 @@ struct AccountView: View {
     
     @State private var firstName = ""
     @State private var lastName = ""
-    @State private var stopAlcoDate = Date()
+    @State private var stopAlcoholDate = Date()
     
     var body: some View {
         NavigationView {
             VStack {
                 Form {
                     Section(header: Text("Personal info")) {
-                        
                         TextField("First name", text: $firstName)
                         TextField("Last name", text: $lastName)
-                        DatePicker("Last alcohol session", selection: $stopAlcoDate, displayedComponents: .date)
-                        
+                        DatePicker("Last alcohol session", selection: $stopAlcoholDate, displayedComponents: .date)
                         Button {
                             print("save")
                         } label: {
