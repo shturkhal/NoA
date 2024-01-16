@@ -11,7 +11,7 @@ struct ContentTabView: View {
     var body: some View {
         
         TabView {
-            PurpleTest(animateGradient: true)
+            PurpleMonitorView()
                 .tabItem {
                     Image(systemName: "flag.checkered.circle")
                     Text("Your results")
