@@ -14,7 +14,7 @@ struct AccountView: View {
     @State private var stopAlcoholDate = Date()
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             VStack {
                 Form {
                     Section(header: Text("Personal info")) {
@@ -27,12 +27,14 @@ struct AccountView: View {
                             Text("Save")
                         }
                     }
+                    
                 }
                 .navigationTitle("Account")
             }
         }
     }
 }
+
 
 #Preview {
     AccountView()

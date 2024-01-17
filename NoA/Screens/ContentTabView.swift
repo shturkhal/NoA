@@ -16,6 +16,7 @@ struct ContentTabView: View {
                     Image(systemName: "flag.checkered.circle")
                     Text("Your results")
                 }
+            
             AccountView()
                 .tabItem {
                     Image(systemName: "person.circle")
